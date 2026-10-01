@@ -5,6 +5,5 @@ int main() {
     printf("    Сальников   \n");
     printf("           М.В. \n");
     printf("]В.М. Сальников[\n");
-
     return 0;
 }
