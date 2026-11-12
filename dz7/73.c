@@ -8,10 +8,12 @@ int main(void){
     double a,b;
 
     printf("Введите два числа для преобразований: \n");
+
     while(scanf("%lf %lf", &a, &b) == 2){
         if(a>=0.0)printf("a**b = %.4lf\n", exponentiation(a,b));
         else printf("некорректный ввод\n");
     }
+    
     printf("Конец программы \n");
 
     return 0;
