@@ -37,9 +37,9 @@ double arithmetic_mean(double *arrptr, unsigned int n){
     return (sum/n);
 }
 
-unsigned int below_arrays_mean_value(double *arrptr, unsigned int n, double k){
-    unsigned int num = 0;
+double below_arrays_mean_value(double *arrptr, unsigned int n, double k){
+    double sum = 0;
     for (int i = 0; i<n; i++)
-        if(arrptr[i] < k) num++; 
-    return num;
+        if(arrptr[i] < k) sum += arrptr[i]; 
+    return sum;
 }

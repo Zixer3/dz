@@ -82,7 +82,7 @@ int main(void){
 
             case 'f':
                 if(array_length != 0)
-                wprintf(L"Сумма элементов, значения которых ниже среднего значения массива: %u", 
+                wprintf(L"Сумма элементов, значения которых ниже среднего значения массива: %lf", 
                     below_arrays_mean_value(array, array_length, arithmetic_mean(array, array_length)));
             else
                 wprintf(L"Сумма элементов, значения которых ниже среднего значения массива: 0");
