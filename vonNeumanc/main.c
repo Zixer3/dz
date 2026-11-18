@@ -58,7 +58,7 @@ int main(void){
                     break;
                 case 3: // DIV
                     if (memory[operand_value] == 0) {
-                        cpu_state[5] = 3; // код ошибки: деление на ноль
+                        cpu_state[5] = 2; // код ошибки: деление на ноль
                         cpu_state[0] = cpu_state[3];
                         continue;
                     }
@@ -75,9 +75,9 @@ int main(void){
                     else cpu_state[0] += 2; // Переход к следующей инструкции, если условие не выполнено
                     break;
                 default:
-                    cpu_state[5] = 2; // Код ошибки
-                    cpu_state[0] = cpu_state[3]; // Переход на вектор прерываний
-                    continue; // Цикл заново с нового pc
+                    cpu_state[5] = 2; // код ошибки стандартный
+                    cpu_state[0] = cpu_state[3]; // переход на вектор прерываний
+                    continue; // цикл заново с нового pc
             }
             
             printf("pc=%d: команда %d, operand=%d, acc=%d\n", current_pc, cpu_state[2], operand_value, cpu_state[1]);
@@ -100,6 +100,9 @@ int main(void){
     {
         case 0:
             printf("Программа успешно завершена.\n");
+            break;
+        case 1:
+            printf("Программа завершена с ошибкой: деление на ноль.\n");
             break;
         default:
             printf("Программа завершена с ошибкой.\n");
