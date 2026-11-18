@@ -18,7 +18,7 @@ g Выход
 
 int main(void){
     int a;
-    double array[9999];
+    double array[9999] = {0};
     unsigned int array_length = 0;
     int made_new_array = 0;
 
